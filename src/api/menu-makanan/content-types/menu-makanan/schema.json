@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_makanans",
+  "info": {
+    "singularName": "menu-makanan",
+    "pluralName": "menu-makanans",
+    "displayName": "Menu_Makanan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "prices": {
+      "type": "biginteger"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "menu_makanans"
+    }
+  }
+}

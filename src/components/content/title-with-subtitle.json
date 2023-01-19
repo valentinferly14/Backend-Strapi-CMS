@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_title_with_subtitles",
+  "info": {
+    "displayName": "Title with subtitle",
+    "icon": "bolt"
+  },
+  "options": {},
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

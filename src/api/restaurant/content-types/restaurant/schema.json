@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "restaurants"
+    },
+    "reataurant_hours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hours.hours-of-operation",
+      "required": false
+    },
+    "menu_makanans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::menu-makanan.menu-makanan",
+      "inversedBy": "restaurants"
+    },
+    "menu_minuman": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::menu-minuman.menu-minuman",
+      "inversedBy": "restaurants"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "content.image-with-description",
+        "content.title-with-subtitle"
+      ]
+    },
+    "textlong": {
+      "type": "richtext"
+    }
+  }
+}

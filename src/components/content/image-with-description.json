@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_image_with_descriptions",
+  "info": {
+    "displayName": "Image with description",
+    "icon": "cubes"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

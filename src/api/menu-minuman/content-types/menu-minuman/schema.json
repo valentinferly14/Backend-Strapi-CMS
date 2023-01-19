@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_minumen",
+  "info": {
+    "singularName": "menu-minuman",
+    "pluralName": "menu-minumen",
+    "displayName": "Menu_Minuman"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "prices": {
+      "type": "biginteger"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "menu_minuman"
+    }
+  }
+}
